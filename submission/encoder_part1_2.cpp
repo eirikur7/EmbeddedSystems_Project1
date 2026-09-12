@@ -2,7 +2,7 @@
 // Counts state changes on chanel C1 and reads the level of C2 at each C1 edge to decide which way the shaft is turning. 
 // All pin access goes through Digital_in, so this file needs no register definitions of its own and the hardware stays hidden from the API.
 
-#include "encoder.h"
+#include "encoder_part1_2.h"
 
 Encoder::Encoder(int pin_c1, int pin_c2) : c1(pin_c1), c2(pin_c2)
 {

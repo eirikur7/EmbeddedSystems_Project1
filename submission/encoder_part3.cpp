@@ -5,7 +5,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "encoder.h"
+#include "encoder_part3.h"
 
 // An interrupt handler cannot be a class member, so init() stores the instance here
 static Encoder *isr_target = 0;

@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "encoder.h"
+#include "encoder_part3.h"
 
 int main()
 {

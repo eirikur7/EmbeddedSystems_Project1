@@ -2,7 +2,7 @@
 #include <util/delay.h>
 #include "digital_out.h"
 #include "digital_in.h"
-#include "encoder.h"
+#include "encoder_part1_2.h"
 
 int main()
 {

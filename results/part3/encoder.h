@@ -1,6 +1,4 @@
-// encoder.h
-// Driver API for a quadrature rotary encoder, interrupt driven.
-// The implementation lives in encoder.cpp, so nothing here exposes the hardware.
+// Driver API for a quadrature rotary encoder, interrupt version.
 #ifndef ENCODER_H
 #define ENCODER_H
 
@@ -10,17 +8,15 @@
 class Encoder
 {
 public:
-    // pin_c1 must be D2, which is the INT0 interrupt pin.
-    // pin_c2 is any other port D pin.
-    // pin_led is driven high for the duration of each interrupt, so the
-    // response time and the handler duration can be measured on a scope.
+    // c1 must be on D2, which is the INT0 pin. c2 is any other port D pin.
+    // led is pulsed for the duration of each interrupt, for scope measurements.
     Encoder(int pin_c1, int pin_c2, int pin_led);
 
-    void init();    // configure the pins, set up INT0, enable interrupts
-    int position(); // current count, 1400 per revolution of the output shaft
+    void init();
+    int position(); // return shaft position
 
-    // Called from the INT0 interrupt handler. Public only because an interrupt
-    // handler cannot be a class member. Do not call this directly.
+    // Called from the interrupt handler.
+    // Public only because an interrupt handler cannot be a class member.
     void handle_edge();
 
 private:

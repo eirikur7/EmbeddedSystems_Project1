@@ -1,6 +1,6 @@
 // Driver API for a quadrature rotary encoder, polled version.
-#ifndef ENCODER_H
-#define ENCODER_H
+#ifndef ENCODER_PART1_2_H
+#define ENCODER_PART1_2_H
 
 #include "digital_in.h"
 

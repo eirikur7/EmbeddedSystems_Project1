@@ -1,6 +1,6 @@
 // Driver API for a quadrature rotary encoder, interrupt version.
-#ifndef ENCODER_H
-#define ENCODER_H
+#ifndef ENCODER_PART3_H
+#define ENCODER_PART3_H
 
 #include "digital_in.h"
 #include "digital_out.h"

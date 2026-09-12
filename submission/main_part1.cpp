@@ -2,7 +2,7 @@
 #include <util/delay.h>
 #include "digital_out.h"
 #include "digital_in.h"
-#include "encoder.h"
+#include "encoder_part1_2.h"
 
 int main()
 {
@@ -18,8 +18,8 @@ int main()
   led.init();
   motor.init();
 
-  // Print every iteration, this is the Part 2 case
-  const int print_interval = 1;
+  // Print every 2000 iterations
+  const int print_interval = 2000;
 
   int samples_since_print = 0;
 
